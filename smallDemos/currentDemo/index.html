@@ -1,0 +1,23 @@
+<html ng-app="app">
+
+<head>
+</head>
+
+<body>
+    <!-- .val can make data of MainController and Subcontroller consistent-->
+    <div ng-controller="MainController">
+        <input ng-model="mydata.val">
+        <button ng-click="mydata.val='123'">Reset</button>
+        <h1>{{mydata.val}}</h1>
+        <div ng-controller="SubController">
+            <input ng-model="mydata.val">
+            <button ng-click="mydata.val='123'">Reset</button>
+            <h1>{{mydata.val}}</h1>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>mv

@@ -1,0 +1,41 @@
+<html ng-app="app">
+
+<head>
+    <style type="text/css">
+        .green {
+            color: green;
+        }
+        
+        .italic {
+            font-style: italic;
+        }
+        
+        .normal {
+            font-weight: normal;
+        }
+        
+        .light {
+            font-weight: lighter;
+        }
+        
+        .thick {
+            font-weight: bold;
+        }
+        
+        .thicker {
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div ng-controller="MainController">
+        <h1 ng-class="[greenVar, 'italic',thickVar]">Hello, world</h1>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
