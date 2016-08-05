@@ -1,0 +1,21 @@
+<html ng-app="app">
+
+<head>
+
+</head>
+
+<body>
+    <div ng-controller="MainController">
+
+        <!-- uppercase characters-->
+        <input ng-model="filter01.str"><br/> {{filter01.str | uppercase}}<br/>
+
+        <!-- format date with timestamp -->
+        <input ng-model="filterDate.str"><br/>{{ filterDate.str | date}} <br/>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

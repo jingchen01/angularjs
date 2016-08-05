@@ -1,0 +1,22 @@
+<html ng-app="app">
+
+<head>
+</head>
+
+<body>
+    <div ng-controller="MainController">
+        <div>Num: {{num}}</div>
+        <div>Nums: {{nums}}</div>
+
+        <button ng-click="increment()">Increment</button>
+        <!-- Break watcher when no need it, keep watcher short and
+          improve the web application performance.
+        -->
+        <button ng-click="breakit()">Break it</button>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
