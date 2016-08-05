@@ -6,13 +6,9 @@
 
 <body>
     <div ng-controller="MainController">
-        <h3>Input length limit 10</h3>
-        <input ng-model="inputdata.str"> <br/>{{inputdata.str | charlimit}}
-        <br/>
-        <h3>Perple who can drink</h3>
-        <div ng-repeat="person in persons.arr | candrink:25">
-            {{person}}
-        </div>
+        <h3>=Filter car's brand and order by price with limitation.=</h3>
+        <input ng-model="carFilter.brand">
+        <div ng-repeat="car in cars.arr | filter:carFilter.brand | orderBy: 'price' | limitTo:2">{{car}}</div>
     </div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>

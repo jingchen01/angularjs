@@ -1,0 +1,28 @@
+<html ng-app="app">
+
+<head>
+
+</head>
+
+<body>
+    <div ng-controller="MainController">
+        <h3>=Filter car's brand without order by price.=</h3>
+        <input ng-model="carFilter.brand">
+        <div ng-repeat="car in cars.arr | filter:carFilter.brand">{{car}}</div>
+        <br/>
+        <h3>=Filter car's brand and order by price.=</h3>
+        <input ng-model="carFilter.brand">
+        <div ng-repeat="car in cars.arr | filter:carFilter.brand | orderBy: 'price'">{{car}}</div>
+        <h3>=Filter car's brand and order by price with limitation.=</h3>
+        <input ng-model="carFilter.brand">
+        <div ng-repeat="car in cars.arr | filter:carFilter.brand | orderBy: 'price' | limitTo:2">{{car}}</div>
+        <h3>=Filter car's brand and order by price with limitation reversely.=</h3>
+        <input ng-model="carFilter.brand">
+        <div ng-repeat="car in cars.arr | filter:carFilter.brand | orderBy: 'price' | limitTo:-2">{{car}}</div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
