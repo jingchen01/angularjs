@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+
+    <div ng-controller="myController1">
+
+        {{data.theVar}}
+
+    </div>
+
+    <div ng-controller="myController2">
+
+        {{data.theVar}}
+
+    </div>
+
+
+    <script>
+        var module       = angular.module("myapp", []);
+        var myController1 = module.controller("myController1", function($scope) {
+            $scope.data = { theVar : "Value One"};
+        });
+        var myController2 = module.controller("myController2", function($scope) {
+            $scope.data = { theVar : "Value Two"};
+        });
+    </script>
+
+
+</body>
+</html>
